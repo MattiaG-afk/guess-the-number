@@ -1,31 +1,31 @@
 import random
 
 random.seed()
-scelta = ""
-g_scelta = ""
+choice = ""
+g_choice = ""
 
 while True:
     num_list = [0]
-    num_min = int(input("Inserisci il numero minimo: "))
-    num_max = int(input("Inserisci il numero massimo: "))
+    num_min = int(input("Enter the minimum number: "))
+    num_max = int(input("Enter the maximum number: "))
     num_list  = range(num_min, num_max + 1)
-    p_scelta = random.choice(num_list)
+    p_choice = random.choice(num_list)
 
-    while g_scelta != p_scelta:
-        g_scelta = int(input("Indovina il numero che ho scelto: "))
-        if g_scelta > p_scelta:
-            print("Il numero che io ho pensato è minore rispetto al tuo. Riprova")
-        elif g_scelta < p_scelta:
-            print("Il numero che io ho pensato è maggiore rispetto al tuo. Riprova")
+    while g_choice != p_choice:
+        g_choice = int(input("Guess the number I chose: "))
+        if g_choice > p_choice:
+            print("The number I thought is less than yours. Try again")
+        elif g_choice < p_choice:
+            print("The number that I thought is greater than yours. Try again")
         else:
-            print("Hai indovinato!!")
+            print("You guessed!!")
             break
 
 
-    scelta  = str(input("Vuoi rigiocare [Y/n]:"))
-    if scelta == "" or scelta == "Y" or scelta == "y":
+    choice  = str(input("Do you want to replay [Y/n]:"))
+    if choice == "" or choice == "Y" or choice == "y":
         pass
     else:
         break
 
-print("Alla prossima partita!")
+print("See you at the next game!")
